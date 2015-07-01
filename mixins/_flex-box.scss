@@ -1,0 +1,38 @@
+/* --------------------------------------------*/
+/* ---------->>> Flex-box Mixins <<<-----------*/
+/* --------------------------------------------*/
+
+// @include flexbox();
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// @include flex(values);
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+// @include order(value);
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+// @include flex-flow(value);
+@mixin flex-flow($val) {
+  -webkit-flex-flow: $val;
+  -moz-flex-flow: $val;
+  -ms-flex-flow: $val;
+  flex-flow: $val;
+}
